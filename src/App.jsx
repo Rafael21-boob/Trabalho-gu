@@ -1,84 +1,69 @@
-import { useState } from 'react'
-import './App.css'
-import gamer from './assets/'
+import { useState } from "react";
+import "./App.css";
+import logo from "./assets/tokstok.png";
+import fescritorio from "./assets/escritorio.png";
+import fgamer from "./assets/gamer.png";
+import fcozinha from "./assets/cozinha.png";
 
 export default function App() {
-
   const CATEGORIA = [
-    { nome: "Escritorio"},
-    { nome: "Gamer"},
-    { nome: "Ergonomica"},
+    { nome: "Escritorio" },
+    { nome: "Gamer" },
+    { nome: "Cozinha" },
   ];
   //Variaveis useStates
   const [nome, setNome] = useState(""); //texto
   const [valor, setValor] = useState(1.0); //texto
   const [estoque, setEstoque] = useState(true); //boolean
- 
+  const [foto, setFoto] = useState("");
+  const [info, setInfo] = useState("");
 
-  const escritorio= () => {
-    setNome("Escritorio");
-    setValor(500.00)
-    setEstoque(true)
-  }
-  const gamer= () => {
-    setNome("Gamer");
-    setValor(500.00)
-    setEstoque(false)
-  }
-  const escritorio= () => {
-    setNome("Escritorio");
-    setValor(500.00)
-    setEstoque(true)
-  }
+  const escritorio = () => {
+    setNome("ADJUST");
+    setValor(629.9);
+    setEstoque(true);
+    setFoto(fescritorio);
+    setInfo("CADEIRA DE ESCRITÓRIO ADJUST");
+  };
+  const gamer = () => {
+    setNome("EVOLUTION");
+    setValor(1200.0);
+    setEstoque(false);
+    setFoto(fgamer);
+    setInfo("CADEIRA GAMER EVOLUTION");
+  };
+  const cozinha = () => {
+    setNome("WISHBONE");
+    setValor(1149.0);
+    setEstoque(true);
+    setFoto(fcozinha);
+    setInfo("CADEIRA WISHBONE");
+  };
 
-  const curar = () => {
-    setHp(100);
-    setVivo(true);
-  }
-
-  const pct = hp/100;
-
-  
   return (
     <>
       <main>
-        <section>
-          
-          <h1>RPG useStates</h1>
-          <div className="thumb">
-           
-          </div>
-          
-          <div className="status">
-            <p>Status</p>
-            <p>Vivo (boolean)</p>
-            
-          </div>
+        <header>
+          <img src={logo} alt="Logo Tok&Stok"  />
+        </header>
 
-          <p id='pontosVida'>Pontos de vida (HP) {hp}/100</p>
-          <div className="barra" style={{background: corBarra}}>
-          </div>
+        {/* 1. Conectando as funções aos botões e dando nome a eles */}
+        <button onClick={escritorio}>Escritório</button>
+        <button onClick={gamer}>Gamer</button>
+        <button onClick={cozinha}>Cozinha</button>
 
-          <button 
-            className='BTcura'
-            
-          >Receber Dano</button>
-          
-          <button 
-            className='BTcura'
-            onClick={curar} 
-          >Curar</button>
-          
-          <div className="classes">
-            <button onClick={() => setClasse(CLASSES[0])}>🧙‍♂️ Cadeira</button>
-            <button onClick={() => setClasse(CLASSES[1])}>⚔️ Guerreiro</button>
-            <button onClick={() => setClasse(CLASSES[2])}>🏹 Arqueiro</button>
-            <button onClick={() => setClasse(CLASSES[3])}>➕ Curandeiro</button>
-          </div>
+        {nome && (
+          <div className="div1">
+            <img src={foto} alt=""/>
+            <h2 id="inf1">{nome}</h2>
+            <p id="inf2">{info}</p>
+            <p id="inf3">Preço: R${valor.toFixed(2)}</p>
 
-        </section>
+            {/* Lógica extra: mostrar se tem no estoque ou não */}
+            <p>{estoque ? "✅ Disponível" : "❌ Indisponível"}</p>
+          </div>
+        )}
       </main>
     </>
-  )
+  );
 }
-

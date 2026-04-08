@@ -1,133 +1,80 @@
-main{
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(90deg, #510a30, #000);
-    float: left;
+main {
+  width: 100%; /* Limita a largura para parecer um celular */
+  margin: 0 auto;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-section{
-    width: 100%;
-    height: 100vh;
-}
-h1{
-    width: 100%;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
-    color: #fff;
-    margin-top: 3vh;
-}
-.thumb{
-    width: 20%;
-    height: auto;
-    aspect-ratio: 1/1;
-    background: #fff;
-    border-radius: 200px;
-    margin-top: 2vh;
-    margin-left: 5%;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-}
-.nome{
-    width: 60%;
-    height: 4vh;
-    background: #fff;
-    float: left;
-    margin-top: 5vh;
-    margin-left: 5%;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 12px;
-    text-indent: 7px;
-    outline: none;
-}
-.status{
-    width: 90%;
-    height: 9vh;
-    float: left;
-    margin-left: 5%;
-    background: #ccc;
-    border-radius: 12px;
-    margin-top: 2vh;
-}
-.status p{
-    width: 50%;
-    height: 3vh;
-    float: left;
-    text-align: center;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.2rem;
-    line-height: 3vh;
-    margin-top: 1vh;
-}
-.status span{
-    width: 50%;
-    height: 3vh;
-    float: left;
-    text-align: center;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1rem;
-    font-style: italic;
-    color: #333;
-    line-height: 3vh;
-    margin-top: 1vh;
-}
-#pontosVida{
-    width: 100%;
-    float: left;
-    text-align: center;
-    color: #fff;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-top: 3vh;
-}
-.barra{
-    width: 90%;
-    height: 2vh;
-    border-radius: 200px;
-    float: left;
-    margin-left: 5%;
-    background: yellow;
-    margin-top: 1vh;
-}
-.BTcura{
-    width: 40%;
-    height: 4vh;
-    float: left;
-    margin-left: 6%;
-    border: 1px solid #fff;
-    background: #f894c9;
-    border-radius: 12px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #8e127d;
-    margin-top: 5vh;
-}
-.classes{
-    width: 90%;
-    height: auto;
-    float: left;
-    margin-left: 5%;
-    border-top: 1px solid #ffffff37;
-    margin-top: 4vh;
-    padding: 5%;
 
+/* Header: Barra com sombra e logo centralizada */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.374); /* Sombra embaixo */
+  margin-bottom: 20px;
 }
-.classes button{
-    width: 40%;
-    height: 4vh;
-    float: left;
-    margin-left: 6%;
-    margin-top: 3vh;
-    border: 1px solid #fff;
-    background: #ffffff6d;
-    border-radius: 12px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: bold;
-    color:#510a30;
+
+header img {
+  height: 40px; /* Ajuste conforme necessário */
+}
+
+/* Estilo dos Botões */
+button {
+  width:86%;
+  height:40px;
+  margin-left: 7%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #00462f82;
+  font-weight: bold;
+  color: rgb(225, 225, 225);
+  box-shadow: 2px 2px 5px #666;
+  text-transform: uppercase;
+}
+
+/* Div Principal (O Quadrado/Card no meio) */
+.div1 {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #000000; /* Uma borda leve para o card */
+  border-radius: 8px;
+  text-align: left; /* Textos alinhados à esquerda por padrão */
+}
+
+/* Imagem da Cadeira: Centralizada com borda preta */
+.div1 img {
+  display: block;
+  margin: 0 auto 20px auto; /* Centraliza horizontalmente */
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid black; /* Borda preta em volta da foto */
+  padding: 10px;
+}
+
+/* Títulos e Parágrafos */
+#inf1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+#inf2 {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Valor: Cor verde e no lado oposto (Direita) */
+#inf3 {
+  color: #28a745; /* Verde */
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right; /* Alinha para o lado oposto dos textos */
+  margin-top: 15px;
+  font-weight: bold;
 }
