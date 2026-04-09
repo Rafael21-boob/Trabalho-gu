@@ -1,5 +1,5 @@
 main {
-  width: 100%; /* Limita a largura para parecer um celular */
+  width: 100%; 
   margin: 0 auto;
   background-color: white;
   min-height: 100vh;
@@ -7,22 +7,22 @@ main {
   flex-direction: column;
 }
 
-/* Header: Barra com sombra e logo centralizada */
+
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
   background-color: white;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.374); /* Sombra embaixo */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.374); 
   margin-bottom: 20px;
 }
 
 header img {
-  height: 40px; /* Ajuste conforme necessário */
+  height: 40px;
 }
 
-/* Estilo dos Botões */
+
 button {
   width:86%;
   height:40px;
@@ -38,26 +38,25 @@ button {
   text-transform: uppercase;
 }
 
-/* Div Principal (O Quadrado/Card no meio) */
 .div1 {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #000000; /* Uma borda leve para o card */
+  border: 1px solid #000000; 
   border-radius: 8px;
-  text-align: left; /* Textos alinhados à esquerda por padrão */
+  text-align: left; 
 }
 
-/* Imagem da Cadeira: Centralizada com borda preta */
+
 .div1 img {
   display: block;
-  margin: 0 auto 20px auto; /* Centraliza horizontalmente */
+  margin: 0 auto 20px auto; 
   width: 100%;
   max-width: 300px;
-  border: 2px solid black; /* Borda preta em volta da foto */
+  border: 2px solid black; 
   padding: 10px;
 }
 
-/* Títulos e Parágrafos */
+
 #inf1 {
   font-size: 24px;
   margin: 10px 0;
@@ -69,12 +68,12 @@ button {
   line-height: 1.5;
 }
 
-/* Valor: Cor verde e no lado oposto (Direita) */
+
 #inf3 {
-  color: #28a745; /* Verde */
+  color: #28a745; 
   font-weight: bold;
   font-size: 20px;
-  text-align: right; /* Alinha para o lado oposto dos textos */
+  text-align: right; 
   margin-top: 15px;
   font-weight: bold;
 }
